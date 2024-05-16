@@ -8,8 +8,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper/modules";
 
-const Slider = (skills) => {
-  console.log("skills:", skills);
+const Slider = ({ skills }) => {
   return (
     <div className="flex items-center justify-center flex-col">
       <Swiper

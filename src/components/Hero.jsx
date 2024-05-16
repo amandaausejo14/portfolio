@@ -6,16 +6,16 @@ const Hero = () => {
       <div className="sm:max-w-[1240px] mx-auto flex flex-col-reverse gap-8 md:flex-row items-center md:w-[80%]">
         <div className="sm: w-[80%] flex flex-col justify-center text-center items-center md:items-start md:text-left">
           <div>
-            <div className="flex flex-col gap-4">
-              <h1 className="sm: text-2xl font-bold md:text-3xl xl:text-5xl">
+            <div className="flex flex-col gap-2 2xl:gap-4">
+              <h1 className="sm: text-2xl font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
                 Hi! I’m Amanda a Jr{" "}
-                <span className="sm:text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-5xl">
+                <span className="sm:text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl">
                   Web Developer!
                 </span>
               </h1>
-              <h2 className="sm: hidden lg:block lg:text-3xl font-bold xl:text-5xl">
+              <h2 className="sm: hidden lg:block lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
                 Welcome to my{" "}
-                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text  lg:text-3xl font-bold xl:text-5xl">
+                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text  lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
                   {" "}
                   Portfolio!
                 </span>

@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
-import MyProjects from "./components/MyProjects";
+import Projects from "./components/Projects";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 function App() {
@@ -13,9 +13,9 @@ function App() {
       <Hero />
       <AboutMe />
       <Skills />
-      {/*  <MyProjects />
+      <Projects />
       <Contacts />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
