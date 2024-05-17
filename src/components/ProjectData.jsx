@@ -9,6 +9,7 @@ const projectData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     languages: ["React", "Scss", "Node"],
+    status: "Completed",
   },
   {
     title: "Film Website",
@@ -16,6 +17,7 @@ const projectData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     languages: ["React", "MaterialUI"],
+    status: "Completed",
   },
   {
     title: "Coffe Shop Website",
@@ -23,6 +25,7 @@ const projectData = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     languages: ["React", "TailwindCSS", "Node"],
+    status: "Ongoing",
   },
 ];
 
