@@ -3,6 +3,7 @@ import { RiShareForward2Fill } from "react-icons/ri";
 import { IoLogoGithub } from "react-icons/io";
 import { GoDotFill } from "react-icons/go";
 const ProjectModal = ({ open, setOpenModal, project }) => {
+  console.log("open " + open);
   if (!open) {
     return null;
   }

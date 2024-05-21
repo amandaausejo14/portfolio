@@ -8,13 +8,14 @@ const Project = ({ project }) => {
   const smallScreen = window.innerWidth <= 768;
   console.log(smallScreen);
   const [openModal, setOpenModal] = useState(false);
+  console.log("openModal " + openModal);
   return (
     <div
       className={`group relative ${
         !openModal ? " transition hover:-translate-y-1  hover:scale-110 duration-300 ..." : ""
       }`}
       onClick={() => {
-        if (smallScreen) {
+        if (smallScreen && !openModal) {
           setOpenModal(true);
         } else {
           return null;
