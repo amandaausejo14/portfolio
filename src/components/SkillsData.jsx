@@ -12,11 +12,11 @@ import RestApi from "../assets/skills/rest-api.png";
 
 export const FrontEndSkills = [
   {
-    name: "CSS",
+    name: "Css",
     img: Css,
   },
   {
-    name: "HTML",
+    name: "Html",
     img: Html,
   },
   {

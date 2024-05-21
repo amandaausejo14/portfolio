@@ -29,7 +29,7 @@ const Project = ({ project }) => {
         <img
           src={project.img}
           alt={project.name}
-          className="rounded-lg border relative z-[-2] border-regular-purple cursor-pointer transition duration shadow-xl sm:group-hover:opacity-0 delay-300"
+          className="rounded-lg border relative z-[-2] border-regular-purple shadow-regular-purple/50 cursor-pointer transition duration shadow-xl sm:group-hover:opacity-0 delay-300"
         />
       </figure>
       <div

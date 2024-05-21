@@ -18,7 +18,7 @@ const Slider = ({ skills }) => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper max-w-[200px] md:max-w-[620px] lg:max-w-[900px] xl:max-w-[1000px]"
+        className="mySwiper max-w-[200px] md:max-w-[620px] lg:max-w-[900px] xl:max-w-[900px]"
         breakpoints={{
           320: {
             slidesPerView: 1,
@@ -41,12 +41,15 @@ const Slider = ({ skills }) => {
         {(skills ? FrontEndSkills : BackEndSkills).map((skill, i) => (
           <SwiperSlide
             key={i}
-            className="bg-regular-purple flex flex-col gap-6 mb-20 group relative shadow-lg text-white border  rounded-xl px-6 py-8 lg:w-[350px] lg:h-[300px] overflow-hidden cursor-pointer justify-center items-center"
+            className="flex flex-col mb-20 group relative  text-white rounded-xl overflow-hidden cursor-pointer justify-center items-center"
           >
-            <figure className="w-[100px] h-[100px] flex items-center justify-center">
-              <img src={skill.img} alt={skill.name} />
-            </figure>
-            <div className="text-lg">
+            <div className="bg-regular-white w-full px-8 py-12 justify-center flex">
+              <figure className=" flex items-center justify-center w-[150px] h-[150px] border-2 border-regular-purple px-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600">
+                <img src={skill.img} alt={skill.name} className="w-[75%]" />
+              </figure>
+            </div>
+
+            <div className="text-lg bg-gradient-to-r from-violet-600 to-indigo-600 w-full flex justify-center p-10">
               <p>{skill.name}</p>
             </div>
           </SwiperSlide>

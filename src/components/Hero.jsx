@@ -37,7 +37,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <figure className="sm:min-w-[100px] md:min-w-[250px] lg:min-w-[360px]">
+        <figure className="sm:min-w-[100px] md:min-w-[250px] lg:min-w-[360px] ">
           <img src={ProfilePic} alt="me" className="mx-auto w-full" />
         </figure>
       </div>
