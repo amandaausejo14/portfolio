@@ -1,20 +1,29 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [sideBar, setSideBar] = useState(false);
   return (
     <>
-      <nav className="flex justify-between py-4 px-8  text-regular-white items-center absolute w-full">
+      <nav className="flex justify-between py-6 px-12  text-regular-white items-center absolute w-full xl:text-xl">
         <figure>
           <h1 className="font-bold ">AMANDA A.</h1>
         </figure>
         <ul className="sm: hidden md:flex gap-8 items-center">
-          <li>About Me</li>
-          <li>Skills</li>
-          <li>Projects</li>
-          <div className="bg-regular-white text-regular-blue p-2 rounded-lg">
-            <li>Contact me!</li>
+          <li className="text-regular-white transition  delay-200 hover:text-regular-purple hover:underline underline-offset-8">
+            <Link to="#about-me">About Me</Link>
+          </li>
+          <li className="text-regular-white transition  delay-200 hover:text-regular-purple hover:underline underline-offset-8">
+            <Link to="#skills">Skills</Link>
+          </li>
+          <li className="text-regular-white transition  delay-200 hover:text-regular-purple hover:underline underline-offset-8">
+            <Link to="#projects">Projects</Link>
+          </li>
+          <div className=" text-regular-white p-2 rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 hover:shadow-xl hover:shadow-regular-purple/50 transition ease-in-out delay-150 hover:scale-110 hover:duration-300">
+            <li>
+              <Link to="#contacts">Contact Me!</Link>
+            </li>
           </div>
         </ul>
         <div className="block md:hidden" onClick={() => setSideBar(true)}>

@@ -1,4 +1,5 @@
 import ProfilePic from "../assets/img-profile.png";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Hero = () => {
   return (
@@ -29,11 +30,11 @@ const Hero = () => {
             </div>
           </div>
           <div className="flex gap-4 lg:gap-8">
-            <button className="sm: p-2 text-xs md:p-4 border border-regular-white rounded-lg lg:text-sm lg:px-6">
-              Check my work
+            <button className="sm: p-2 text-xs md:p-4 border border-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:scale-110 hover:duration-300">
+              <Link to="#projects"> Check my work</Link>
             </button>
-            <button className="sm: p-2 text-xs md:p-4 border border-regular-white text-regular-purple bg-regular-white rounded-lg lg:text-sm lg:px-6">
-              Get in touch
+            <button className="sm: p-2 text-xs md:p-4 border border-regular-white text-regular-purple bg-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:border hover:scale-110 hover:duration-300">
+              <Link to="#contacts"> Check my work</Link>
             </button>
           </div>
         </div>

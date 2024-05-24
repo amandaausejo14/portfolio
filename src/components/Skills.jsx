@@ -5,7 +5,7 @@ import Slider from "./Slider";
 const Skills = () => {
   const [frontSkills, setFrontSkills] = useState(true);
   return (
-    <div className="w-full p-4 my-12 text-regular-white ">
+    <div id="skills" className="w-full p-4 my-12 text-regular-white ">
       <div className="max-w-[1240px] mx-auto flex flex-col gap-20 items-center">
         <div>
           <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
