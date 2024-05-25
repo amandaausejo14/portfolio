@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
 
 const Slider = ({ skills }) => {
   return (
@@ -17,7 +17,8 @@ const Slider = ({ skills }) => {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        freeMode={true}
+        modules={[FreeMode, Pagination]}
         className="mySwiper max-w-[200px] md:max-w-[620px] lg:max-w-[900px] xl:max-w-[900px]"
         breakpoints={{
           320: {

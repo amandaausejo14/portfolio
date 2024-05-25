@@ -1,5 +1,6 @@
 import AboutMeImg from "../assets/about-me-img.jpg";
 import Pin from "../assets/pin.png";
+import CV from "../assets/CV-eng.pdf";
 const AboutMe = () => {
   return (
     <div id="about-me" className="w-full p-4 my-12 text-regular-white">
@@ -30,9 +31,13 @@ const AboutMe = () => {
               React, and Node.js, enhancing my ability to create dynamic web applications. If you d like to learn more
               about my journey and skills, feel free to download my CV.
             </p>
-            <button className="sm: min-w-[20%] max-w-[90%] md: p-4  text-regular-white rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 hover:shadow-xl hover:shadow-regular-purple/50 transition ease-in-out delay-150 hover:scale-110 hover:duration-300">
-              Download CV
-            </button>
+            <a
+              href={CV}
+              download
+              className="sm: min-w-[20%] max-w-[90%] md: p-4  text-regular-white rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 hover:shadow-xl hover:shadow-regular-purple/50 transition ease-in-out delay-150 hover:scale-110 hover:duration-300"
+            >
+              Download my CV!
+            </a>
           </div>
         </div>
       </div>

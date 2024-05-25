@@ -8,17 +8,23 @@ const ProjectModal = ({ open, setOpenModal, project }) => {
     return null;
   }
   return (
-    <div className="z-50 transition duration-300 bg-regular-blue/90 overflow-x-hidden overflow-y-auto fixed inset-0 flex justify-center items-center ">
-      <div className="max-w-[80%] bg-regular-white flex flex-col justify-center items-center gap-6 rounded-xl overflow-hidden text-center pb-4 md:text-start md:max-w-[50%] md:pb-8 xl:md:max-w-[40%]">
+    <div
+      onClick={() => setOpenModal(false)}
+      className="z-50 transition duration-300 bg-regular-blue/90 overflow-x-hidden overflow-y-auto fixed inset-0 flex justify-center items-center "
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-[80%] bg-regular-white flex flex-col justify-center items-center gap-6 rounded-xl overflow-hidden text-center pb-4 md:text-start md:max-w-[50%] md:pb-8 xl:md:max-w-[40%]"
+      >
         <div>
           <figure className="md:max-h-[250px] overflow-hidden border-b-4 border-regular-purple">
             <img src={project.img} alt={project.name} />
           </figure>
-          <IoIosCloseCircle
+          {/* <IoIosCloseCircle
             className="absolute right-5 top-20 md:top-5"
             onClick={() => setOpenModal(false)}
             size={30}
-          />
+          /> */}
         </div>
         <div className="flex gap-8">
           <button className="flex items-center gap-2 bg-regular-blue text-regular-white font-semibold p-1 rounded-md md:p-3">

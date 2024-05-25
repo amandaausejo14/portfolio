@@ -4,7 +4,6 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { GoDotFill } from "react-icons/go";
 
 const Project = ({ project }) => {
-  // const [isClick, setisClicked] = useState(false);
   const smallScreen = window.innerWidth <= 768;
   console.log(smallScreen);
   const [openModal, setOpenModal] = useState(false);
@@ -46,7 +45,11 @@ const Project = ({ project }) => {
         <div className="z-10 bg-[#15213C] p-2 gap-2 lg:p-4 absolute w-full transition shadow-md rounded-b-md flex flex-col">
           <div className="flex items-center justify-between">
             <h1 className="text-lg font-bold text-bold line-clamp-1">{project.title}</h1>
-            <IoIosArrowDropdownCircle size={30} color="#8546F0" onClick={() => setOpenModal(true)} />
+            <IoIosArrowDropdownCircle
+              size={30}
+              style={{ fill: "linear-gradient(to right, #7c3aed, #4f46e5)" }}
+              onClick={() => setOpenModal(true)}
+            />
           </div>
           <div className="w-[90%]">
             <p className="text-sm font-light line-clamp-3">{project.description}</p>

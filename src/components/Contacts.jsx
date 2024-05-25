@@ -42,8 +42,12 @@ const AboutMe = () => {
             opportunities available, let's chat.
           </p>
           <div className="flex gap-4">
-            <FaLinkedin size={30} />
-            <IoLogoGithub size={30} />
+            <a href="https://www.linkedin.com/in/amanda-ausejo/" target="_blank">
+              <FaLinkedin size={30} />
+            </a>
+            <a href="https://github.com/Amy1435" target="_blank">
+              <IoLogoGithub size={30} />
+            </a>
           </div>
         </div>
 
@@ -83,7 +87,7 @@ const AboutMe = () => {
                 Send Message
               </button>
             </div>
-            <span>{result}</span>
+            <span className="text-regular-purple">{result}</span>
           </form>
         </div>
       </div>
