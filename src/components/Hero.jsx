@@ -3,7 +3,7 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const Hero = () => {
   return (
-    <div className="bg-regular-blue h-screen text-white flex items-center justify-center">
+    <section className="bg-regular-blue h-screen text-white flex items-center justify-center snap-center">
       <div className="sm:max-w-[1240px] mx-auto flex flex-col-reverse gap-8 md:flex-row items-center md:w-[80%]">
         <div className="sm: w-[80%] flex flex-col justify-center text-center items-center md:items-start md:text-left">
           <div>
@@ -24,7 +24,7 @@ const Hero = () => {
             </div>
             <div className="sm: w-full text-xs md:w-9/12 my-8 md:text-sm lg:w-3/4 lg:text-base">
               <p>
-                Step into my portfolio and explore the world of my skills and experiences. Here, you ll find a curated
+                Step into my portfolio and explore the world of my skills and experiences. Here, you will find a curated
                 collection of my work and passions, offering a glimpse into who I am and what I can bring to the table.
               </p>
             </div>
@@ -42,7 +42,7 @@ const Hero = () => {
           <img src={ProfilePic} alt="me" className="mx-auto w-full" />
         </figure>
       </div>
-    </div>
+    </section>
   );
 };
 

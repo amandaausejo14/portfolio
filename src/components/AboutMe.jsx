@@ -3,7 +3,7 @@ import Pin from "../assets/pin.png";
 import CV from "../assets/CV-eng.pdf";
 const AboutMe = () => {
   return (
-    <div id="about-me" className="w-full p-4 my-12 text-regular-white">
+    <section id="about-me" className="w-full text-regular-white h-screen flex justify-center items-center snap-center">
       <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center md:w-[85%]">
         <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
           About{" "}
@@ -41,7 +41,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

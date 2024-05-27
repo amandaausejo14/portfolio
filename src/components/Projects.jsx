@@ -1,8 +1,9 @@
 import Project from "./Project";
 import projectData from "./ProjectData";
+import WorkingGirl from "./icons/WorkingGirl";
 const Projects = () => {
   return (
-    <div id="projects" className="w-full p-4 my-12 text-regular-white ">
+    <section id="projects" className="w-full h-screen text-regular-white flex justify-center items-center snap-center">
       <div className="max-w-[1240px] mx-auto flex flex-col gap-20 items-center">
         <div>
           <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
@@ -13,13 +14,18 @@ const Projects = () => {
           </h1>
         </div>
 
-        <div className="grid w-[80%] gap-8 xl:w-full xl:grid-cols-3 justify-center items-center">
-          {projectData.map((project, i) => (
-            <Project project={project} key={i} />
-          ))}
+        <div className="flex justify-center items-center  2xl: gap-32">
+          <figure className="hidden 2xl:block border-4 border-regular-purple rounded-full">
+            <WorkingGirl />
+          </figure>
+          <div className="grid w-[60%] gap-8 xl:w-full xl:grid-cols-3 justify-center items-center 2xl:grid-cols-none">
+            {projectData.map((project, i) => (
+              <Project project={project} key={i} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { HashLink as Link } from "react-router-hash-link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -8,7 +9,14 @@ const Navbar = () => {
     <>
       <nav className="flex justify-between py-6 px-12  text-regular-white items-center absolute w-full xl:text-xl">
         <figure>
-          <h1 className="font-bold ">AMANDA A.</h1>
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="font-bold "
+          >
+            AMANDA A.
+          </motion.h1>
         </figure>
         <ul className="sm: hidden md:flex gap-8 items-center">
           <li className="text-regular-white transition  delay-200 hover:text-regular-purple hover:underline underline-offset-8">

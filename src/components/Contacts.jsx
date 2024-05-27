@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
+import ContactGirl from "./icons/ContactGirl";
 const { VITE_FORM_KEY } = import.meta.env;
 const AboutMe = () => {
   const [result, setResult] = useState("");
@@ -28,9 +29,15 @@ const AboutMe = () => {
     }
   };
   return (
-    <div id="contacts" className="w-full p-4 mt-40 mb-12 text-regular-white ">
-      <div className="sm: max-w-[80%] mx-auto flex flex-col gap-12 md:justify-between md:flex-row">
-        <div className="flex flex-col items-center text-center md:w-[40%] gap-8 md:text-left md:items-start">
+    <section
+      id="contacts"
+      className="w-full p-4 mt-40 mb-12 text-regular-white  h-screen flex justify-center items-center snap-center"
+    >
+      <div className="sm: max-w-[80%] mx-auto flex flex-col gap-12 md:justify-between md:flex-row ">
+        <div className="flex flex-col  text-center md:w-[40%] gap-8 md:text-left md:items-start">
+          <div className="hidden lg:flex w-full justify-center">
+            <ContactGirl />
+          </div>
           <h1 className="sm: text-3xl font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
             Let's{" "}
             <span className="sm: text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-5xl ">
@@ -41,7 +48,7 @@ const AboutMe = () => {
             Ready to kickstart my career in web development! Seeking junior or trainee positions. If you have any
             opportunities available, let's chat.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 w-full justify-center md:justify-start">
             <a href="https://www.linkedin.com/in/amanda-ausejo/" target="_blank">
               <FaLinkedin size={30} />
             </a>
@@ -75,7 +82,7 @@ const AboutMe = () => {
               name="message"
               placeholder="Lets’s Talk about..."
               required
-              rows="5"
+              rows="8"
               className="rounded-md bg-[#15213C] text-sm p-2 placeholder-gray-500 placeholder-opacity-100"
             />
             <div className="flex w-full justify-end">
@@ -91,7 +98,7 @@ const AboutMe = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
