@@ -1,22 +1,49 @@
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { HashLink as Link } from "react-router-hash-link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+
+const sidebarVariants = {
+  hidden: {
+    opacity: 0,
+    y: "-100%",
+  },
+  visible: {
+    opacity: 1,
+    y: "0%",
+    transition: {
+      duration: 0.5,
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "-100%",
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 50 },
+};
 
 const Navbar = () => {
   const [sideBar, setSideBar] = useState(false);
   return (
     <>
-      <nav className="flex justify-between py-6 px-12  text-regular-white items-center absolute w-full xl:text-xl">
+      <motion.nav
+        className="flex justify-between py-6 px-10 z-10 text-regular-white items-center absolute w-full xl:text-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+      >
         <figure>
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="font-bold "
-          >
-            AMANDA A.
-          </motion.h1>
+          <h1 className="font-bold ">AMANDA A.</h1>
         </figure>
         <ul className="sm: hidden md:flex gap-8 items-center">
           <li className="text-regular-white transition  delay-200 hover:text-regular-purple hover:underline underline-offset-8">
@@ -35,29 +62,41 @@ const Navbar = () => {
           </div>
         </ul>
         <div className="block md:hidden" onClick={() => setSideBar(true)}>
-          <AiOutlineMenu size={30} className="color text-white" />
+          <AiOutlineMenu size={22} className="color text-white" />
         </div>
-      </nav>
+      </motion.nav>
       {/* mobile menu */}
-      {sideBar ? (
-        <>
-          <div className="flex flex-col absolute w-full h-screen right-0 bg-regular-white text-regular-blue z-30 p-4 gap-4">
+      <AnimatePresence>
+        {sideBar && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={sidebarVariants}
+            className="flex flex-col absolute w-full h-screen right-0  bg-gradient-to-r from-violet-600 to-indigo-600 text-regular-white z-30 p-8 gap-32"
+          >
             <div className="flex justify-end" onClick={() => setSideBar(false)}>
               <AiOutlineClose size={20} />
             </div>
             <nav className="flex justify-center">
-              <ul className="flex flex-col gap-8 items-center">
-                <li onClick={() => setSideBar(false)}>About Me</li>
-                <li onClick={() => setSideBar(false)}>Skills</li>
-                <li onClick={() => setSideBar(false)}>Projects</li>
-                <li onClick={() => setSideBar(false)}>Contact me!</li>
-              </ul>
+              <motion.ul className="flex flex-col gap-8 items-center text-2xl">
+                <motion.li variants={itemVariants} onClick={() => setSideBar(false)}>
+                  <Link to="#about-me">About Me</Link>
+                </motion.li>
+                <motion.li variants={itemVariants} onClick={() => setSideBar(false)}>
+                  <Link to="#skills">Skills</Link>
+                </motion.li>
+                <motion.li variants={itemVariants} onClick={() => setSideBar(false)}>
+                  <Link to="#projects">Projects</Link>
+                </motion.li>
+                <motion.li variants={itemVariants} onClick={() => setSideBar(false)}>
+                  <Link to="#contacts">Contact Me!</Link>
+                </motion.li>
+              </motion.ul>
             </nav>
-          </div>
-        </>
-      ) : (
-        ""
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
