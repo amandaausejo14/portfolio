@@ -3,6 +3,21 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import ContactGirl from "./icons/ContactGirl";
 const { VITE_FORM_KEY } = import.meta.env;
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+      staggerChildren: 0.5,
+    },
+  },
+};
 const AboutMe = () => {
   const [result, setResult] = useState("");
 
@@ -28,16 +43,26 @@ const AboutMe = () => {
       setResult(data.message);
     }
   };
+  //animation
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
   return (
-    <section
+    <motion.section
       id="contacts"
       className="w-full p-4 mt-40 mb-12 text-regular-white  h-screen flex justify-center items-center snap-center"
+      variants={variants}
+      initial="initial"
+      ref={ref}
+      animate={isInView && "animate"}
     >
       <div className="sm: max-w-[80%] mx-auto flex flex-col gap-12 md:justify-between md:flex-row ">
-        <div className="flex flex-col  text-center md:w-[40%] gap-8 md:text-left md:items-start">
-          <div className="hidden lg:flex w-full justify-center">
+        <motion.div
+          className="flex flex-col  text-center md:w-[40%] gap-8 md:text-left md:items-start"
+          variants={variants}
+        >
+          {/* <div className="hidden lg:flex w-full justify-center">
             <ContactGirl />
-          </div>
+          </div> */}
           <h1 className="sm: text-3xl font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
             Let's{" "}
             <span className="sm: text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-5xl ">
@@ -56,9 +81,9 @@ const AboutMe = () => {
               <IoLogoGithub size={30} />
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="sm: flex justify-center gap-20 md:min-w-[40%]">
+        <motion.div className="sm: flex justify-center gap-20 md:min-w-[40%]" variants={variants}>
           <form onSubmit={onSubmit} className="flex flex-col w-full gap-4 text-lg text-regular-white font-semibold">
             <label> Your Email</label>
             <input
@@ -96,9 +121,9 @@ const AboutMe = () => {
             </div>
             <span className="text-regular-purple">{result}</span>
           </form>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

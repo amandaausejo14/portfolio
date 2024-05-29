@@ -4,43 +4,28 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const textVariants = {
   initial: {
-    x: -300,
     opacity: 0,
   },
   animate: {
-    x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
-      staggerChildren: 0.1,
+      duration: 2,
     },
   },
 };
 
-// const imgVariants = {
-//   initial: {
-//     x: 300,
-//     opacity: 0,
-//   },
-//   animate: {
-//     x: 0,
-//     opacity: 1,
-//     transition: {
-//       duration: 0.8,
-//     },
-//   },
-// };
-
 const sliderVariants = {
   initial: {
-    x: -500,
+    x: "-100%",
   },
   animate: {
-    x: "-550%",
+    x: "-200%",
     transition: {
+      delay: 1,
+      ease: "linear",
       repeat: Infinity,
       repeatType: "mirror",
-      duration: 50,
+      duration: 20,
     },
   },
 };
@@ -58,44 +43,28 @@ const Hero = () => {
           variants={textVariants}
         >
           <div>
-            <motion.div className="flex flex-col gap-2 z-10 2xl:gap-4" variants={textVariants}>
-              <motion.h1
-                className="sm: text-2xl font-bold md:text-3xl xl:text-4xl 2xl:text-5xl"
-                variants={textVariants}
-              >
+            <motion.div className="flex flex-col gap-2 z-10 2xl:gap-4">
+              <motion.h1 className="sm: text-2xl font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
                 Hi! I’m Amanda a Jr{" "}
-                <motion.span
-                  className="sm:text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl"
-                  variants={textVariants}
-                >
+                <span className="sm:text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl">
                   Web Developer!
-                </motion.span>
+                </span>
               </motion.h1>
-              <motion.h2
-                className="sm: hidden lg:block lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl"
-                variants={textVariants}
-              >
+              <motion.h2 className="sm: hidden lg:block lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
                 Welcome to my{" "}
-                <motion.span
-                  className="bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text  lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl"
-                  variants={textVariants}
-                >
-                  {" "}
+                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text  lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
                   Portfolio!
-                </motion.span>
+                </span>
               </motion.h2>
             </motion.div>
-            <motion.div
-              className="sm: w-full text-xs md:w-9/12 my-8 md:text-sm lg:w-3/4 lg:text-base"
-              variants={textVariants}
-            >
-              <motion.p variants={textVariants}>
+            <motion.div className="sm: w-full text-xs md:w-9/12 my-8 md:text-sm lg:w-3/4 lg:text-base">
+              <motion.p>
                 Step into my portfolio and explore the world of my skills and experiences. Here, you will find a curated
                 collection of my work and passions, offering a glimpse into who I am and what I can bring to the table.
               </motion.p>
             </motion.div>
           </div>
-          <motion.div className="flex gap-4 lg:gap-8" variants={textVariants}>
+          <motion.div className="flex gap-4 lg:gap-8">
             <motion.button className="sm: p-2 text-xs md:p-4 cursor-pointer border border-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:scale-110 hover:duration-300">
               <Link to="#projects"> Check my work</Link>
             </motion.button>
@@ -105,9 +74,9 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <figure className="sm:min-w-[100px] md:min-w-[250px] lg:min-w-[360px] ">
+        <motion.figure className="sm:min-w-[100px] md:min-w-[250px] lg:min-w-[360px] " variants={textVariants}>
           <img src={ProfilePic} alt="me" className="mx-auto w-full" />
-        </figure>
+        </motion.figure>
       </motion.div>
 
       <motion.div

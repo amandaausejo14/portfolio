@@ -1,7 +1,26 @@
 import AboutMeImg from "../assets/about-me-img.jpg";
 import Pin from "../assets/pin.png";
 import CV from "../assets/CV-eng.pdf";
+import Icon from "../assets/icon.png";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+      staggerChildren: 0.5,
+    },
+  },
+};
 const AboutMe = () => {
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <section id="about-me" className="w-full text-regular-white h-screen flex justify-center items-center snap-center">
       <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center md:w-[85%]">
@@ -12,15 +31,24 @@ const AboutMe = () => {
           </span>
         </h1>
 
-        <div className="sm: gap-12 flex flex-col justify-center items-center md:flex-row w-[80%]">
-          <figure className="rounded-md overflow-hidden">
-            <img src={AboutMeImg} alt="me-profile" />
-            {/* <div className=" flex items-center justify-center w-[50px] h-[50px] border-2 border-regular-purple px-4 rounded-full bg-regular-white text-regular-blue absolute">
-              {" "}
-              hello
+        <motion.div
+          className="sm: gap-12 flex flex-col justify-center items-center md:flex-row w-[80%]"
+          variants={variants}
+          initial="initial"
+          ref={ref}
+          animate={isInView && "animate"}
+        >
+          <motion.figure className="rounded-md overflow-hidden relative" variants={variants}>
+            <img src={AboutMeImg} alt="me-profile" className="object-fit" />
+            {/* <div className="absolute bottom-0 right-0 items-center justify-center border-2 border-regular-purple px-4 rounded-full bg-regular-white text-regular-blue">
+              {/* <p>Hello, i'm a full stack developer</p> 
+              <img src={Icon} className="W-full" />
             </div> */}
-          </figure>
-          <div className="sm: max-w-[90%] p-4 flex flex-col items-center text-center text-regular-white text-sm gap-4 md:text-left md:items-start lg:text-base lg:max-w-[55%] xl:gap-8  xl:p-6">
+          </motion.figure>
+          <motion.div
+            className="sm: max-w-[90%] p-4 flex flex-col items-center text-center text-regular-white text-sm gap-4 md:text-left md:items-start lg:text-base lg:max-w-[55%] xl:gap-8  xl:p-6"
+            variants={variants}
+          >
             <div className="flex items-center">
               <img src={Pin} />
               <p className="text-lg">Milan, Italy</p>
@@ -38,8 +66,8 @@ const AboutMe = () => {
             >
               Download my CV!
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,7 +1,19 @@
 import { useState } from "react";
-import { IoIosArrowDropleft } from "react-icons/io";
-import { IoIosArrowDropright } from "react-icons/io";
 import Slider from "./Slider";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+      staggerChildren: 0.5,
+    },
+  },
+};
 const Skills = () => {
   const [frontSkills, setFrontSkills] = useState(true);
   const [fade, setFade] = useState(false);
@@ -13,6 +25,10 @@ const Skills = () => {
       setFade(false);
     }, 400);
   };
+
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+
   return (
     <section id="skills" className="w-full text-regular-white h-screen  flex justify-center items-center snap-center">
       <div className="max-w-[1240px] mx-auto flex flex-col gap-20 items-center">
@@ -24,8 +40,14 @@ const Skills = () => {
             </span>
           </h1>
         </div>
-        <div className="flex flex-col items-center gap-6">
-          <div className="border border-regular-purple flex gap-4 p-2 rounded-lg">
+        <motion.div
+          className="flex flex-col items-center gap-6"
+          variants={variants}
+          initial="initial"
+          ref={ref}
+          animate={isInView && "animate"}
+        >
+          <motion.div className="border border-regular-purple flex gap-4 p-2 rounded-lg" variants={variants}>
             <button
               className={`py-4 px-8 rounded-lg transition delay-150 ${
                 frontSkills ? "bg-regular-white text-regular-purple" : ""
@@ -42,11 +64,14 @@ const Skills = () => {
             >
               Back-end
             </button>
-          </div>
-          <div className={`flex items-center ${fade ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}>
+          </motion.div>
+          <motion.div
+            className={`flex items-center ${fade ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
+            variants={variants}
+          >
             <Slider skills={frontSkills} />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
