@@ -27,7 +27,7 @@ const Skills = () => {
   };
 
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-200px" });
 
   return (
     <section id="skills" className="w-full text-regular-white h-screen  flex justify-center items-center snap-center">
@@ -67,7 +67,6 @@ const Skills = () => {
           </motion.div>
           <motion.div
             className={`flex items-center ${fade ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
-            variants={variants}
           >
             <Slider skills={frontSkills} />
           </motion.div>

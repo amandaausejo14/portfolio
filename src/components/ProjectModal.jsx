@@ -14,35 +14,48 @@ const ProjectModal = ({ open, setOpenModal, project }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[80%] bg-regular-white flex flex-col justify-center items-center gap-6 rounded-xl overflow-hidden text-center pb-4 md:text-start md:max-w-[50%] md:pb-8 xl:md:max-w-[40%]"
+        className="max-w-[80%] bg-regular-white flex flex-col justify-center items-center gap-10 rounded-xl overflow-hidden text-center pb-4 md:text-start md:max-w-[50%] md:pb-8 xl:md:max-w-[40%]"
       >
         <div>
           <figure className="md:max-h-[250px] overflow-hidden border-b-4 border-regular-purple">
             <img src={project.img} alt={project.name} />
           </figure>
-          {/* <IoIosCloseCircle
-            className="absolute right-5 top-20 md:top-5"
-            onClick={() => setOpenModal(false)}
-            size={30}
-          /> */}
         </div>
         <div className="flex gap-8">
-          <button className="flex items-center gap-2 bg-regular-blue text-regular-white font-semibold p-1 rounded-md md:p-3">
+          <a
+            href={project.website}
+            target="_blank"
+            className="flex items-center gap-2 bg-regular-blue text-regular-white font-semibold p-1 rounded-md md:p-3"
+          >
             Live Site <RiShareForward2Fill />
-          </button>
-          <button className="flex items-center gap-2 bg-regular-purple text-regular-white font-semibold p-1 rounded-md md:p-3">
-            Github <IoLogoGithub />
-          </button>
+          </a>
+          <a
+            href={project.gitHubFront}
+            target="_blank"
+            className="flex items-center gap-2 bg-regular-purple text-regular-white font-semibold p-1 rounded-md md:p-3"
+          >
+            {project.gitHubBack ? "Front-end GutHub" : "GitHub"}
+            <IoLogoGithub />
+          </a>
+          {project.gitHubBack && (
+            <a
+              href={project.gitHubBack}
+              target="_blank"
+              className="flex items-center gap-2 bg-regular-purple text-regular-white font-semibold p-1 rounded-md md:p-3"
+            >
+              Back-end Github <IoLogoGithub />
+            </a>
+          )}
         </div>
-        <section className="flex flex-col items-center gap-3 md:flex-row w-[90%] text-regular-blue md:gap-20 md:items-start">
-          <div className=" max-w-[90%] flex flex-col gap-2 ">
+        <section className="max-w-[85%] flex flex-col items-center gap-3 md:flex-row w-[90%] text-regular-blue md:gap-16 md:items-start">
+          <div className="flex flex-col gap-2 ">
             <h1 className="font-bold text-lg md:text-2xl">{project.title}</h1>
-            <p className="text-xs font-light md:text-base md:font-normal">{project.description}</p>
+            <p className="text-xs font-light md:text-base md:font-normal md:w-[350px]">{project.description}</p>
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-3">
               <h2 className="text-base font-bold md:text-lg ">Languages</h2>
-              <div className="flex gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 {project.languages.map((language, i) => (
                   <div key={i} className="flex gap-2 items-center">
                     <GoDotFill color="#8546F0" />

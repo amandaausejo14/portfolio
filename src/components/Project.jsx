@@ -10,7 +10,7 @@ const Project = ({ project }) => {
   console.log("openModal " + openModal);
   return (
     <div
-      className={`group relative ${
+      className={`group relative text-regular-white ${
         !openModal ? " transition hover:-translate-y-1  hover:scale-110 duration-300 ..." : ""
       } 2xl:w-[330px]`}
       onClick={() => {
@@ -36,19 +36,22 @@ const Project = ({ project }) => {
         className={`opacity-0 absolute top-0 invisible transition duration-200 z-100  sm:visible delay-300 w-full scale-0 group-hover:scale-110 group-hover:translate-y-[-2vw]  group-hover:opacity-100`}
       >
         <figure>
-          <img
-            src={project.img}
-            alt={project.name}
-            className="cursor-pointer transition duration shadow-xl rounded-t-md w-full"
-          />
+          <a href={project.website} target="_blank">
+            <img
+              src={project.img}
+              alt={project.name}
+              className="cursor-pointer transition duration shadow-xl rounded-t-md w-full"
+            />
+          </a>
         </figure>
         <div className="z-10 bg-[#15213C] p-2 gap-2 lg:p-4 absolute w-full transition shadow-md rounded-b-md flex flex-col">
           <div className="flex items-center justify-between">
             <h1 className="text-lg font-bold text-bold line-clamp-1">{project.title}</h1>
             <IoIosArrowDropdownCircle
               size={30}
-              style={{ fill: "linear-gradient(to right, #7c3aed, #4f46e5)" }}
+              color="#8546F0"
               onClick={() => setOpenModal(true)}
+              className="cursor-pointer"
             />
           </div>
           <div className="w-[90%]">

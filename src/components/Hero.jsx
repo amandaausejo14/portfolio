@@ -59,8 +59,9 @@ const Hero = () => {
             </motion.div>
             <motion.div className="sm: w-full text-xs md:w-9/12 my-8 md:text-sm lg:w-3/4 lg:text-base">
               <motion.p>
-                Step into my portfolio and explore the world of my skills and experiences. Here, you will find a curated
-                collection of my work and passions, offering a glimpse into who I am and what I can bring to the table.
+                I'm a dedicated web developer with a bit less then a year of experience, specializing in JavaScript,
+                React and Node.js. Dive into my portfolio to explore my work and get to know the creative and technical
+                skills I can bring to each project.
               </motion.p>
             </motion.div>
           </div>

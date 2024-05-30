@@ -45,7 +45,7 @@ const AboutMe = () => {
   };
   //animation
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const isInView = useInView(ref, { margin: "-200px" });
   return (
     <motion.section
       id="contacts"
@@ -70,8 +70,8 @@ const AboutMe = () => {
             </span>
           </h1>
           <p>
-            Ready to kickstart my career in web development! Seeking junior or trainee positions. If you have any
-            opportunities available, let's chat.
+            Excited to begin my career in web development! I'm looking for junior or trainee positions. If you have any
+            openings, Fell free to email me!
           </p>
           <div className="flex gap-4 w-full justify-center md:justify-start">
             <a href="https://www.linkedin.com/in/amanda-ausejo/" target="_blank">
