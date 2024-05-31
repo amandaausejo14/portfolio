@@ -44,7 +44,7 @@ const Hero = () => {
         >
           <div>
             <motion.div className="flex flex-col gap-2 z-10 2xl:gap-4">
-              <motion.h1 className="sm: text-2xl font-bold md:text-3xl xl:text-4xl 2xl:text-5xl">
+              <motion.h1 className="sm:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
                 Hi! I’m Amanda a Jr{" "}
                 <span className="sm:text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl">
                   Web Developer!
@@ -57,7 +57,7 @@ const Hero = () => {
                 </span>
               </motion.h2>
             </motion.div>
-            <motion.div className="sm: w-full text-xs md:w-9/12 my-8 md:text-sm lg:w-3/4 lg:text-base">
+            <motion.div className="text-xs sm:text-base w-full md:w-9/12 my-8 lg:w-3/4">
               <motion.p>
                 I'm a dedicated web developer with a bit less then a year of experience, specializing in JavaScript,
                 React and Node.js. Dive into my portfolio to explore my work and get to know the creative and technical
@@ -66,10 +66,10 @@ const Hero = () => {
             </motion.div>
           </div>
           <motion.div className="flex gap-4 lg:gap-8">
-            <motion.button className="sm: p-2 text-xs md:p-4 cursor-pointer border border-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:scale-110 hover:duration-300">
+            <motion.button className="text-xs sm:text-base p-2  md:p-4 cursor-pointer border border-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:scale-110 hover:duration-300">
               <Link to="#projects"> Check my work</Link>
             </motion.button>
-            <motion.button className="sm: p-2 text-xs md:p-4 border cursor-pointer border-regular-white text-regular-purple bg-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:border hover:scale-110 hover:duration-300">
+            <motion.button className="text-xs sm:text-base p-2  md:p-4 border cursor-pointer border-regular-white text-regular-purple bg-regular-white rounded-lg transition delay-200 ease-in-out lg:text-sm lg:px-6 hover:border hover:scale-110 hover:duration-300">
               <Link to="#contacts">Contact me</Link>
             </motion.button>
           </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-[20px] text-9xl z-0 whitespace-nowrap w-[40%] text-[40vh] text-slate-200  text-[rgba(255,255,255,0.06)]  md:w-[50%] md:text-[50vh] md:text-[rgba(255,255,255,0.04)]"
+        className="absolute bottom-[20px] text-9xl z-0 whitespace-nowrap w-[40%] text-[40vh] text-[rgba(255,255,255,0.06)]  md:w-[50%] md:text-[50vh] md:text-[rgba(255,255,255,0.04)]"
         variants={sliderVariants}
         initial="initial"
         animate="animate"

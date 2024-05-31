@@ -47,9 +47,10 @@ const AboutMe = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-200px" });
   return (
+    // p-4 mt-40 mb-12
     <motion.section
       id="contacts"
-      className="w-full p-4 mt-40 mb-12 text-regular-white  h-screen flex justify-center items-center snap-center"
+      className="w-full h-[auto] py-12 text-regular-white   flex justify-center items-center snap-center lg:h-screen"
       variants={variants}
       initial="initial"
       ref={ref}

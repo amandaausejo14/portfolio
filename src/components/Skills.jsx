@@ -30,8 +30,11 @@ const Skills = () => {
   const isInView = useInView(ref, { margin: "-200px" });
 
   return (
-    <section id="skills" className="w-full text-regular-white h-screen  flex justify-center items-center snap-center">
-      <div className="max-w-[1240px] mx-auto flex flex-col gap-20 items-center">
+    <section
+      id="skills"
+      className="w-full  h-auto py-12 text-regular-white flex justify-center items-center snap-center lg:h-screen"
+    >
+      <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center">
         <div>
           <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
             My{" "}
@@ -41,7 +44,7 @@ const Skills = () => {
           </h1>
         </div>
         <motion.div
-          className="flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-8"
           variants={variants}
           initial="initial"
           ref={ref}

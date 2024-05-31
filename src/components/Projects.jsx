@@ -23,9 +23,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full h-screen bg-[#F5F5F5] text-regular-blue flex justify-center items-center snap-center"
+      className="w-full h-auto py-12 bg-[#F5F5F5] text-regular-blue flex justify-center items-center snap-center lg:h-screen"
     >
-      <div className="max-w-[1240px] mx-auto flex flex-col gap-20 items-center">
+      <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center lg:gap-20">
         <div>
           <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
             My{" "}
@@ -36,13 +36,13 @@ const Projects = () => {
         </div>
 
         <motion.div
-          className="flex flex-col justify-center items-center 2xl: gap-32"
+          className="gap-10 flex flex-col justify-center items-center 2xl:gap-32"
           variants={variants}
           initial="initial"
           ref={ref}
           animate={isInView && "animate"}
         >
-          <motion.div className="hidden lg:block w-[70%] text-center" variants={variants}>
+          <motion.div className="block w-[70%] text-center" variants={variants}>
             <p>
               Here, you'll find a selection of the web development projects I've worked on, where i could elevate my
               skills in JavaScript, React, and Node.js and learn different frameworks and libraries. I had a lot of fun
@@ -50,7 +50,7 @@ const Projects = () => {
             </p>
           </motion.div>
           <motion.div
-            className="grid w-[60%] gap-8 z-10 xl:w-full xl:grid-cols-3 justify-center items-center"
+            className="grid w-[50%] gap-8 z-10 xl:w-full xl:grid-cols-3 justify-center items-center"
             variants={variants}
           >
             {projectData.map((project, i) => (
