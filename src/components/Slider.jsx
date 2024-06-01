@@ -42,10 +42,10 @@ const Slider = ({ skills }) => {
         {(skills ? FrontEndSkills : BackEndSkills).map((skill, i) => (
           <SwiperSlide
             key={i}
-            className="flex flex-col mb-20 group relative  text-white rounded-xl overflow-hidden cursor-pointer justify-center items-center"
+            className="flex flex-col mb-20 group relative  text-white rounded-xl overflow-hidden cursor-pointer justify-center items-center xl:max-h-[300px] xl:max-w-[260px]"
           >
             <div className="bg-regular-white w-full px-8 py-12 justify-center flex">
-              <figure className=" flex items-center justify-center w-[150px] h-[150px] border-2 border-regular-purple px-4 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600">
+              <figure className=" flex items-center justify-center w-[150px] h-[150px] border-2 border-regular-purple px-4  rounded-full bg-gradient-to-r from-violet-600 to-indigo-600">
                 <img src={skill.img} alt={skill.name} className="w-[75%]" />
               </figure>
             </div>

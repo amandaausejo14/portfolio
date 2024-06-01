@@ -23,9 +23,9 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full h-auto py-12 bg-[#F5F5F5] text-regular-blue flex justify-center items-center snap-center lg:h-screen"
+      className="w-full h-auto py-12 bg-[#F5F5F5] text-regular-blue flex justify-center items-center snap-center xl:h-screen"
     >
-      <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center lg:gap-20">
+      <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center xl:gap-8 lg:gap-20">
         <div>
           <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
             My{" "}
@@ -50,7 +50,7 @@ const Projects = () => {
             </p>
           </motion.div>
           <motion.div
-            className="grid w-[50%] gap-8 z-10 xl:w-full xl:grid-cols-3 justify-center items-center"
+            className="grid w-[50%] gap-8 z-10 xl:w-[80%] xl:grid-cols-3 justify-center items-center 2xl:w-full"
             variants={variants}
           >
             {projectData.map((project, i) => (

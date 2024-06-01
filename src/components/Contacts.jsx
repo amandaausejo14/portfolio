@@ -50,7 +50,7 @@ const AboutMe = () => {
     // p-4 mt-40 mb-12
     <motion.section
       id="contacts"
-      className="w-full h-[auto] py-12 text-regular-white   flex justify-center items-center snap-center lg:h-screen"
+      className="w-full h-[auto] py-12 text-regular-white flex justify-center items-center snap-center xl:h-screen"
       variants={variants}
       initial="initial"
       ref={ref}

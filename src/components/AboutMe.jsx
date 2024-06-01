@@ -23,7 +23,7 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="w-full h-auto py-12 bg-[#F5F5F5] text-regular-blue flex justify-center items-center snap-center lg:h-screen"
+      className="w-full h-auto py-12 bg-[#F5F5F5] text-regular-blue flex justify-center items-center snap-center xl:h-screen"
     >
       <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center md:w-[85%]">
         <h1 className="sm: text-3xl md:text-4xl font-bold lg:text-5xl">
@@ -40,15 +40,11 @@ const AboutMe = () => {
           ref={ref}
           animate={isInView && "animate"}
         >
-          <motion.figure className="rounded-md overflow-hidden relative" variants={variants}>
-            <img src={AboutMeImg} alt="me-profile" className="object-fit m-w-4/5" />
-            {/* <div className="absolute bottom-0 right-0 items-center justify-center border-2 border-regular-purple px-4 rounded-full bg-regular-white text-regular-blue">
-              {/* <p>Hello, i'm a full stack developer</p> 
-              <img src={Icon} className="W-full" />
-            </div> */}
+          <motion.figure className="rounded-md overflow-hidden relative sm:max-w-[70%]" variants={variants}>
+            <img src={AboutMeImg} alt="me-profile" className="object-fit m-w-4/5 xl:max-h-[400px] 2xl:max-h-[500px]" />
           </motion.figure>
           <motion.div
-            className=" text-regular-blue  sm: max-w-[90%] p-4 flex flex-col items-center text-center text-sm gap-4 sm:text-base md:text-left md:items-start lg:text-base lg:max-w-[55%] xl:gap-8  xl:p-6"
+            className=" text-regular-blue  sm: max-w-[90%] p-4 flex flex-col items-center text-center text-sm gap-4 sm:text-base md:text-left md:items-start lg:text-base lg:max-w-[40%] xl:gap-8  xl:p-6"
             variants={variants}
           >
             <div className="flex items-center">
