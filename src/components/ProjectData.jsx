@@ -28,7 +28,7 @@ const projectData = [
   {
     title: "Coffe Shop Website",
     img: CoffeeWebsite,
-    website: "",
+    website: "https://coffee-shop-omega-coral.vercel.app/",
     gitHubFront: "https://github.com/Amy1435/coffee-shop",
     gitHubBack: "https://github.com/Amy1435/coffee-shop-back-end",
     description:
