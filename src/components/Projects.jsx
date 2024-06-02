@@ -42,7 +42,7 @@ const Projects = () => {
           ref={ref}
           animate={isInView && "animate"}
         >
-          <motion.div className="block w-[70%] text-center" variants={variants}>
+          <motion.div className="block w-[70%] text-center text-sm" variants={variants}>
             <p>
               Here, you'll find a selection of the web development projects I've worked on, where i could elevate my
               skills in JavaScript, React, and Node.js and learn different frameworks and libraries. I had a lot of fun
@@ -50,7 +50,7 @@ const Projects = () => {
             </p>
           </motion.div>
           <motion.div
-            className="grid w-[50%] gap-8 z-10 xl:w-[80%] xl:grid-cols-3 justify-center items-center 2xl:w-full"
+            className="grid w-[50%] gap-8 z-10 md:w-[40%] xl:w-[80%] xl:grid-cols-3 justify-center items-center 2xl:w-full"
             variants={variants}
           >
             {projectData.map((project, i) => (

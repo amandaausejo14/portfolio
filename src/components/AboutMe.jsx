@@ -40,7 +40,7 @@ const AboutMe = () => {
           ref={ref}
           animate={isInView && "animate"}
         >
-          <motion.figure className="rounded-md overflow-hidden relative sm:max-w-[70%]" variants={variants}>
+          <motion.figure className="rounded-md overflow-hidden relative max-w-[70%]" variants={variants}>
             <img src={AboutMeImg} alt="me-profile" className="object-fit m-w-4/5 xl:max-h-[400px] 2xl:max-h-[500px]" />
           </motion.figure>
           <motion.div
@@ -51,12 +51,12 @@ const AboutMe = () => {
               <img src={Pin} />
               <p className="text-lg">Milan, Italy</p>
             </div>
-            <p>
+            <p className="text-sm">
               A year and a half ago, I began my journey into web development as a hobby, teaching myself HTML and CSS.
               My passion grew as I connected with web developer communities, which inspired me to dedicate myself fully
-              to coding. I enrolled in a six-month bootcamp, where I mastered JavaScript, React, and Node.js, and
-              brought my first project to life. Now, I'm eager to gain more experience and knowledge in a professional
-              setting. If you'd like to learn more about my journey and skills, feel free to download my CV.
+              to coding. I enrolled in a bootcamp, where I mastered JavaScript, React, and Node.js, and brought my first
+              project to life. Now, I'm eager to gain more experience and knowledge in a professional setting. Feel free
+              to download my CV!
             </p>
             <a
               href={CV}

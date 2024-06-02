@@ -14,27 +14,20 @@ const ProjectModal = ({ open, setOpenModal, project }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[80%] bg-regular-white flex flex-col justify-center items-center gap-10 rounded-xl overflow-hidden text-center pb-4 md:text-start md:max-w-[50%] md:pb-8 xl:md:max-w-[40%]"
+        className="max-w-[80%] bg-regular-white flex flex-col justify-center items-center gap-6 rounded-xl overflow-hidden text-center pb-4 md:text-start md:pb-8 xl:max-w-[60%] 2xl:max-w-[45%]"
       >
         <div>
-          <figure className="md:max-h-[250px] overflow-hidden border-b-4 border-regular-purple">
+          <figure className="flex justify-center items-center md:max-h-[250px] overflow-hidden border-b-4 border-regular-purple">
             <img src={project.img} alt={project.name} />
           </figure>
         </div>
-        <div className="flex gap-8">
-          <a
-            href={project.website}
-            target="_blank"
-            className="flex items-center gap-2 bg-regular-blue text-regular-white font-semibold p-1 rounded-md md:p-3"
-          >
-            Live Site <RiShareForward2Fill />
-          </a>
+        <div className="flex flex-row flex-wrap justify-center gap-4 items-center sm:flex-row sm:gap-2 xl:gap-8">
           <a
             href={project.gitHubFront}
             target="_blank"
             className="flex items-center gap-2 bg-regular-purple text-regular-white font-semibold p-1 rounded-md md:p-3"
           >
-            {project.gitHubBack ? "Front-end GutHub" : "GitHub"}
+            {project.gitHubBack ? "Front-end" : "GitHub"}
             <IoLogoGithub />
           </a>
           {project.gitHubBack && (
@@ -43,16 +36,23 @@ const ProjectModal = ({ open, setOpenModal, project }) => {
               target="_blank"
               className="flex items-center gap-2 bg-regular-purple text-regular-white font-semibold p-1 rounded-md md:p-3"
             >
-              Back-end Github <IoLogoGithub />
+              Back-end <IoLogoGithub />
             </a>
           )}
+          <a
+            href={project.website}
+            target="_blank"
+            className="flex items-center gap-2 bg-regular-blue text-regular-white font-semibold p-1 rounded-md md:p-3"
+          >
+            Live Site <RiShareForward2Fill />
+          </a>
         </div>
-        <section className="max-w-[85%] flex flex-col items-center gap-3 md:flex-row w-[90%] text-regular-blue md:gap-16 md:items-start">
+        <section className="max-w-[90%] flex flex-col items-center justify-center gap-6 md:flex-row w-[90%] text-regular-blue md:gap-16 md:items-start">
           <div className="flex flex-col gap-2 ">
             <h1 className="font-bold text-lg md:text-2xl">{project.title}</h1>
-            <p className="text-xs font-light md:text-base md:font-normal md:w-[350px]">{project.description}</p>
+            <p className="text-xs font-light max-w-[350px] md:text-base md:font-normal">{project.description}</p>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-3">
               <h2 className="text-base font-bold md:text-lg ">Languages</h2>
               <div className="grid grid-cols-2 gap-2">
@@ -64,7 +64,7 @@ const ProjectModal = ({ open, setOpenModal, project }) => {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="flex flex-col gap-3">
               <h2 className="text-base font-bold md:text-lg">Status</h2>
               <p className="text-xs font-semibold md:text-base">{project.status}</p>
             </div>

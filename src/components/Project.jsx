@@ -12,7 +12,7 @@ const Project = ({ project }) => {
     <div
       className={`group relative text-regular-white ${
         !openModal ? " transition hover:-translate-y-1  hover:scale-110 duration-300 ..." : ""
-      } 2xl:w-[330px]`}
+      } 2xl:w-[370px]`}
       onClick={() => {
         if (smallScreen && !openModal) {
           setOpenModal(true);

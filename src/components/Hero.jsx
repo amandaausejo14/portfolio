@@ -44,9 +44,9 @@ const Hero = () => {
         >
           <div>
             <motion.div className="flex flex-col gap-2 z-10 2xl:gap-4">
-              <motion.h1 className="sm:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+              <motion.h1 className="text-3xl font-bold xl:text-4xl 2xl:text-5xl">
                 Hi! I’m Amanda a Jr{" "}
-                <span className="sm:text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl">
+                <span className="text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl">
                   Web Developer!
                 </span>
               </motion.h1>
@@ -57,7 +57,7 @@ const Hero = () => {
                 </span>
               </motion.h2>
             </motion.div>
-            <motion.div className="text-xs sm:text-base w-full md:w-9/12 my-8 lg:w-3/4">
+            <motion.div className="text-sm sm:text-base w-full md:w-9/12 my-8 lg:w-3/4">
               <motion.p>
                 I'm a dedicated web developer with a bit less then a year of experience, specializing in JavaScript,
                 React and Node.js. Dive into my portfolio to explore my work and get to know the creative and technical
@@ -81,7 +81,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-[20px] text-9xl z-0 whitespace-nowrap w-[40%] text-[40vh] text-[rgba(255,255,255,0.06)]  md:w-[50%] md:text-[50vh] md:text-[rgba(255,255,255,0.04)]"
+        className="hidden md:block absolute bottom-[20px] text-9xl z-0 whitespace-nowrap w-[40%] text-[40vh] text-[rgba(255,255,255,0.06)]  md:w-[50%] md:text-[50vh] md:text-[rgba(255,255,255,0.04)]"
         variants={sliderVariants}
         initial="initial"
         animate="animate"

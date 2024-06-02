@@ -32,7 +32,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="w-full  h-auto py-12 text-regular-white flex justify-center items-center snap-center xl:h-screen"
+      className="w-full h-auto py-12 text-regular-white flex justify-center items-center snap-center xl:h-screen"
     >
       <div className="max-w-[1240px] mx-auto flex flex-col gap-12 items-center">
         <div>
