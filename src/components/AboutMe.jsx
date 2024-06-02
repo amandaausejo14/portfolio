@@ -51,7 +51,7 @@ const AboutMe = () => {
               <img src={Pin} />
               <p className="text-lg">Milan, Italy</p>
             </div>
-            <p className="text-sm">
+            <p className="text-sm sm:text-base">
               A year and a half ago, I began my journey into web development as a hobby, teaching myself HTML and CSS.
               My passion grew as I connected with web developer communities, which inspired me to dedicate myself fully
               to coding. I enrolled in a bootcamp, where I mastered JavaScript, React, and Node.js, and brought my first

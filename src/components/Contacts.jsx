@@ -70,7 +70,7 @@ const AboutMe = () => {
               Connect!
             </span>
           </h1>
-          <p className="text-sm">
+          <p className="text-sm sm:text-base">
             Excited to begin my career in web development! I'm looking for junior or trainee positions. If you have any
             openings, Fell free to email me!
           </p>

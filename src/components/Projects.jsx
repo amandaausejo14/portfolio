@@ -42,7 +42,7 @@ const Projects = () => {
           ref={ref}
           animate={isInView && "animate"}
         >
-          <motion.div className="block w-[70%] text-center text-sm" variants={variants}>
+          <motion.div className="block w-[70%] text-center text-sm sm:text-base" variants={variants}>
             <p>
               Here, you'll find a selection of the web development projects I've worked on, where i could elevate my
               skills in JavaScript, React, and Node.js and learn different frameworks and libraries. I had a lot of fun

@@ -44,15 +44,15 @@ const Hero = () => {
         >
           <div>
             <motion.div className="flex flex-col gap-2 z-10 2xl:gap-4">
-              <motion.h1 className="text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+              <motion.h1 className="text-3xl font-bold sm:text-4xl 2xl:text-5xl">
                 Hi! I’m Amanda a Jr{" "}
-                <span className="text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text xl:text-4xl 2xl:text-5xl">
+                <span className="text-3xl bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text sm:text-4xl 2xl:text-5xl">
                   Web Developer!
                 </span>
               </motion.h1>
-              <motion.h2 className="sm: hidden lg:block lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+              <motion.h2 className="sm: hidden lg:block lg:text-4xl font-bold xl:text-4xl 2xl:text-5xl">
                 Welcome to my{" "}
-                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text  lg:text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+                <span className="bg-gradient-to-r from-violet-600 to-indigo-600 inline-block text-transparent bg-clip-text  lg:text-4xl font-bold xl:text-4xl 2xl:text-5xl">
                   Portfolio!
                 </span>
               </motion.h2>

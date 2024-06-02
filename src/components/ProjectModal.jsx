@@ -21,7 +21,7 @@ const ProjectModal = ({ open, setOpenModal, project }) => {
             <img src={project.img} alt={project.name} />
           </figure>
         </div>
-        <div className="flex flex-row flex-wrap justify-center gap-4 items-center sm:flex-row sm:gap-2 xl:gap-8">
+        <div className="w-[90%] flex flex-row flex-wrap justify-center gap-4 items-center sm:gap-2 xl:gap-8">
           <a
             href={project.gitHubFront}
             target="_blank"
