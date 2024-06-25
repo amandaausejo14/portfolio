@@ -25,17 +25,17 @@ const projectData = [
     languages: ["Javascript", "React", "MaterialUI", "API"],
     status: "Completed",
   },
-  {
-    title: "Coffe Shop Website",
-    img: CoffeeWebsite,
-    website: "https://coffee-shop-steel-zeta.vercel.app/",
-    gitHubFront: "https://github.com/Amy1435/coffee-shop",
-    gitHubBack: "https://github.com/Amy1435/coffee-shop-back-end",
-    description:
-      "Inspired by my friend’s dream of opening a coffee shop, I developed this website to introduce the café to the community. Visitors can explore the diverse range of coffee offerings, learn more about each blend, and conveniently purchase their favorite coffee online. ",
-    languages: ["Javascript", "React", "TailwindCSS", "Node"],
-    status: "Ongoing",
-  },
+  // {
+  //   title: "Coffe Shop Website",
+  //   img: CoffeeWebsite,
+  //   website: "https://coffee-shop-steel-zeta.vercel.app/",
+  //   gitHubFront: "https://github.com/Amy1435/coffee-shop",
+  //   gitHubBack: "https://github.com/Amy1435/coffee-shop-back-end",
+  //   description:
+  //     "Inspired by my friend’s dream of opening a coffee shop, I developed this website to introduce the café to the community. Visitors can explore the diverse range of coffee offerings, learn more about each blend, and conveniently purchase their favorite coffee online. ",
+  //   languages: ["Javascript", "React", "TailwindCSS", "Node"],
+  //   status: "Ongoing",
+  // },
 ];
 
 export default projectData;

@@ -50,7 +50,7 @@ const Projects = () => {
             </p>
           </motion.div>
           <motion.div
-            className="grid w-[50%] gap-8 z-10 md:w-[40%] xl:w-[80%] xl:grid-cols-3 justify-center items-center 2xl:w-full"
+            className="flex flex-col w-[50%] gap-8 z-10 md:w-[40%] xl:flex-row xl:w-[80%] xl: justify-center items-center 2xl:w-full"
             variants={variants}
           >
             {projectData.map((project, i) => (
