@@ -1,11 +1,10 @@
 import CoffeeWebsite from "../assets/projects/coffee-website.png";
 import NomadWebsite from "../assets/projects/digital-nomad-ally.png";
 import FilmWebsite from "../assets/projects/film-app.png";
-import VideoNomadWebsite from "../assets/projects/video-digital-nomad-website.mp4";
 
 const projectData = [
   {
-    title: "Digital Nomad Website",
+    title: "Digital Allay",
     img: NomadWebsite,
     website: "https://final-project-front-nine.vercel.app/",
     gitHubFront: "https://github.com/Amy1435/final-project-front",
@@ -16,7 +15,7 @@ const projectData = [
     status: "Completed",
   },
   {
-    title: "Film Website",
+    title: "Film Pire",
     img: FilmWebsite,
     website: "https://filmapp-amanda.netlify.app/",
     gitHubFront: "https://github.com/Amy1435/filmpire",
@@ -25,17 +24,17 @@ const projectData = [
     languages: ["Javascript", "React", "MaterialUI", "API"],
     status: "Completed",
   },
-  // {
-  //   title: "Coffe Shop Website",
-  //   img: CoffeeWebsite,
-  //   website: "https://coffee-shop-steel-zeta.vercel.app/",
-  //   gitHubFront: "https://github.com/Amy1435/coffee-shop",
-  //   gitHubBack: "https://github.com/Amy1435/coffee-shop-back-end",
-  //   description:
-  //     "Inspired by my friend’s dream of opening a coffee shop, I developed this website to introduce the café to the community. Visitors can explore the diverse range of coffee offerings, learn more about each blend, and conveniently purchase their favorite coffee online. ",
-  //   languages: ["Javascript", "React", "TailwindCSS", "Node"],
-  //   status: "Ongoing",
-  // },
+  {
+    title: "Coffee South",
+    img: CoffeeWebsite,
+    website: "https://coffee-south.vercel.app/",
+    gitHubFront: "https://github.com/Amy1435/coffee-shop",
+    gitHubBack: "https://github.com/Amy1435/coffee-shop-back-end",
+    description:
+      "Inspired by my friend’s dream of opening a coffee shop, I developed this website to introduce the café to the community. Visitors can explore the diverse range of coffee offerings, learn more about each blend, and conveniently purchase their favorite coffee online. ",
+    languages: ["Javascript", "React", "TailwindCSS", "Node"],
+    status: "Ongoing",
+  },
 ];
 
 export default projectData;
